@@ -1,9 +1,9 @@
 import google.generativeai as genai
+import os
 
 genai.configure(
-    api_key="AQ.Ab8RN6JyTvhB1gqcuFzTL0J6lHeRJqmpDtxlzmyqE7OC3uJIFw"
+    api_key=os.getenv("GEMINI_API_KEY")
 )
-
 model = genai.GenerativeModel("gemini-flash-latest")
 
 def generate_proposal(requirements):
