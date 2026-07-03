@@ -9,7 +9,7 @@ export default function MyPayments() {
     const email = localStorage.getItem("userEmail");
 
     fetch(
-      `http://127.0.0.1:5000/api/payments/${email}`
+      `https://web-development-services-platform.onrender.com/api/payments/${email}`
     )
       .then((response) => response.json())
       .then((data) => {

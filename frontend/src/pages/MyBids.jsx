@@ -6,7 +6,7 @@ export default function MyBids() {
   useEffect(() => {
     const email = localStorage.getItem("userEmail");
 
-    fetch(`http://127.0.0.1:5000/api/my-bids/${email}`)
+    fetch(`https://web-development-services-platform.onrender.com/api/my-bids/${email}`)
       .then((res) => res.json())
       .then((data) => setBids(data.bids))
       .catch((err) => console.error(err));

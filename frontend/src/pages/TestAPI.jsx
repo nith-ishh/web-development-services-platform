@@ -6,7 +6,7 @@ export default function TestAPI() {
 
   useEffect(() => {
 
-    fetch("http://127.0.0.1:5000/api/test")
+    fetch("https://web-development-services-platform.onrender.com/api/test")
       .then((response) => response.json())
       .then((data) => {
         setMessage(data.message);

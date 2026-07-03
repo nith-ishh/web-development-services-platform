@@ -9,7 +9,7 @@ export default function MyMeetings() {
   useEffect(() => {
 
     fetch(
-      `http://127.0.0.1:5000/api/my-meetings/${email}`
+      `https://web-development-services-platform.onrender.com/api/my-meetings/${email}`
     )
       .then((response) => response.json())
       .then((data) => {

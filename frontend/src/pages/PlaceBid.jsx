@@ -22,7 +22,7 @@ export default function PlaceBid() {
 
   const submitBid = async () => {
     try {
-      await fetch("http://127.0.0.1:5000/api/place-bid", {
+      await fetch("https://web-development-services-platform.onrender.com/api/place-bid", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

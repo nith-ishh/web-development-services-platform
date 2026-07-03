@@ -19,20 +19,20 @@ export default function Dashboard() {
 
 useEffect(() => {
   fetch(
-  "http://127.0.0.1:5000/api/unread-count/nithish@gmail.com"
+  "https://web-development-services-platform.onrender.com/api/unread-count/nithish@gmail.com"
 )
   .then((response) => response.json())
   .then((data) => {
     setUnreadCount(data.count);
   });
 
-  fetch("http://127.0.0.1:5000/api/projects")
+  fetch("https://web-development-services-platform.onrender.com/api/projects")
     .then((response) => response.json())
     .then((data) => {
       setTotalProjects(data.projects.length);
     });
 
-  fetch("http://127.0.0.1:5000/api/users")
+  fetch("https://web-development-services-platform.onrender.com/api/users")
     .then((response) => response.json())
     .then((data) => {
       setActiveClients(data.users.length);
@@ -40,7 +40,7 @@ useEffect(() => {
     const email = localStorage.getItem("userEmail");
 
 fetch(
-  `http://127.0.0.1:5000/api/notifications/${email}`
+  `https://web-development-services-platform.onrender.com/api/notifications/${email}`
 )
   .then((response) => response.json())
   .then((data) => {

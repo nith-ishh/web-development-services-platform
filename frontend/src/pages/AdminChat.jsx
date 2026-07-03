@@ -11,21 +11,21 @@ export default function AdminChat() {
 const [selectedClient, setSelectedClient] = useState("");
 
 useEffect(() => {
-  fetch("http://127.0.0.1:5000/api/all-chat-files")
+  fetch("https://web-development-services-platform.onrender.com/api/all-chat-files")
   .then((response) => response.json())
   .then((data) => {
     setAllFiles(data.files);
   });
 
   fetch(
-  "http://127.0.0.1:5000/api/all-chat-files"
+  "https://web-development-services-platform.onrender.com/api/all-chat-files"
 )
   .then((response) => response.json())
   .then((data) => {
     setAllFiles(data.files);
   });
 
-  fetch("http://127.0.0.1:5000/api/chat-clients")
+  fetch("https://web-development-services-platform.onrender.com/api/chat-clients")
     .then((response) => response.json())
     .then((data) => {
       setClients(data.clients);
@@ -38,20 +38,20 @@ useEffect(() => {
   if (!selectedClient) return;
 
   fetch(
-    `http://127.0.0.1:5000/api/messages/${selectedClient}`
+    `https://web-development-services-platform.onrender.com/api/messages/${selectedClient}`
   )
     .then((response) => response.json())
     .then((data) => {
       setMessages(data.messages);
       fetch(
-  `http://127.0.0.1:5000/api/chat-files/${selectedClient}`
+  `https://web-development-services-platform.onrender.com/api/chat-files/${selectedClient}`
 )
   .then((response) => response.json())
   .then((data) => {
     setFiles(data.files);
   });
       fetch(
-  `http://127.0.0.1:5000/api/chat-files/${selectedClient}`
+  `https://web-development-services-platform.onrender.com/api/chat-files/${selectedClient}`
 )
   .then((response) => response.json())
   .then((data) => {
@@ -60,7 +60,7 @@ useEffect(() => {
     });
 
   fetch(
-    `http://127.0.0.1:5000/api/chat-files/${selectedClient}`
+    `https://web-development-services-platform.onrender.com/api/chat-files/${selectedClient}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -69,14 +69,14 @@ useEffect(() => {
     });
 
   fetch(
-    "http://127.0.0.1:5000/api/mark-read/nithish@gmail.com"
+    "https://web-development-services-platform.onrender.com/api/mark-read/nithish@gmail.com"
   );
 
 }, [selectedClient]);
   const sendReply = async () => {
 
     await fetch(
-      "http://127.0.0.1:5000/api/send-message",
+      "https://web-development-services-platform.onrender.com/api/send-message",
       {
         method: "POST",
         headers: {
@@ -153,7 +153,7 @@ useEffect(() => {
 {files.map((file, index) => (
 
   <a
-  href={`http://127.0.0.1:5000/uploads/${file[1]}`}
+  href={`https://web-development-services-platform.onrender.com/uploads/${file[1]}`}
   target="_blank"
   rel="noreferrer"
 >

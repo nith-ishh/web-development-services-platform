@@ -18,7 +18,7 @@ export default function ProjectRequest() {
   formData.append("file", file);
 
   const uploadResponse = await fetch(
-  "http://127.0.0.1:5000/api/upload",
+  "https://web-development-services-platform.onrender.com/api/upload",
   {
     method: "POST",
     body: formData,
@@ -32,7 +32,7 @@ console.log(uploadData);
 alert(uploadData.message);
 
   const response = await fetch(
-    "http://127.0.0.1:5000/api/project",
+    "https://web-development-services-platform.onrender.com/api/project",
     {
       method: "POST",
       headers: {

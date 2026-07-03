@@ -16,7 +16,7 @@ export default function AdminDashboard() {
 
 useEffect(() => {
 
-  fetch("http://127.0.0.1:5000/api/analytics")
+  fetch("https://web-development-services-platform.onrender.com/api/analytics")
     .then((response) => response.json())
     .then((data) => {
 

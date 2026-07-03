@@ -7,7 +7,7 @@ export default function AdminMeetings() {
   useEffect(() => {
 
     fetch(
-      "http://127.0.0.1:5000/api/meetings"
+      "https://web-development-services-platform.onrender.com/api/meetings"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -21,7 +21,7 @@ export default function AdminMeetings() {
 ) => {
 
   await fetch(
-    `http://127.0.0.1:5000/api/update-meeting/${meetingId}/${status}`
+    `https://web-development-services-platform.onrender.com/api/update-meeting/${meetingId}/${status}`
   );
 
   window.location.reload();

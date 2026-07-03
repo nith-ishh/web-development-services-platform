@@ -4,7 +4,7 @@ export default function ViewBids() {
   const [bids, setBids] = useState([]);
 
   const fetchBids = () => {
-  fetch("http://127.0.0.1:5000/api/bids")
+  fetch("https://web-development-services-platform.onrender.com/api/bids")
     .then((res) => res.json())
     .then((data) => {
       setBids(data.bids);
@@ -17,7 +17,7 @@ useEffect(() => {
 
 const acceptBid = async (id) => {
   await fetch(
-    `http://127.0.0.1:5000/api/accept-bid/${id}`,
+    `https://web-development-services-platform.onrender.com/api/accept-bid/${id}`,
     {
       method: "POST",
     }

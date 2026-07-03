@@ -17,7 +17,7 @@ export default function Estimator() {
   const calculate = async () => {
 
   const response = await fetch(
-    "http://127.0.0.1:5000/api/estimate",
+    "https://web-development-services-platform.onrender.com/api/estimate",
     {
       method: "POST",
       headers: {
@@ -43,7 +43,7 @@ export default function Estimator() {
 const generatePDF = async () => {
 
   const response = await fetch(
-    "http://127.0.0.1:5000/api/generate-pdf",
+    "https://web-development-services-platform.onrender.com/api/generate-pdf",
     {
       method: "POST",
       headers: {

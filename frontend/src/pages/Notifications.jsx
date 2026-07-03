@@ -6,7 +6,7 @@ export default function Notifications() {
   const markAsRead = async (id) => {
 
   await fetch(
-    `http://127.0.0.1:5000/api/mark-notification-read/${id}`
+    `https://web-development-services-platform.onrender.com/api/mark-notification-read/${id}`
   );
 
   window.location.reload();
@@ -18,7 +18,7 @@ export default function Notifications() {
     const email = localStorage.getItem("userEmail");
 
     fetch(
-      `http://127.0.0.1:5000/api/notifications/${email}`
+      `https://web-development-services-platform.onrender.com/api/notifications/${email}`
     )
       .then((response) => response.json())
       .then((data) => {

@@ -14,7 +14,7 @@ export default function AdminDeliverables() {
     formData.append("project_name", projectName);
 
     await fetch(
-      "http://127.0.0.1:5000/api/upload-deliverable",
+      "https://web-development-services-platform.onrender.com/api/upload-deliverable",
       {
         method: "POST",
         body: formData

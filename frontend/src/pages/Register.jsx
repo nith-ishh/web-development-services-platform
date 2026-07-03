@@ -26,7 +26,7 @@ export default function Register() {
 };
 
   const response = await fetch(
-    "http://127.0.0.1:5000/api/register",
+    "https://web-development-services-platform.onrender.com/api/register",
     {
       method: "POST",
       headers: {

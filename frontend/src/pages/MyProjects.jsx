@@ -7,7 +7,7 @@ export default function MyProjects() {
   const updateProgress = async (projectId, progress) => {
 
   await fetch(
-    `http://127.0.0.1:5000/api/update-progress/${projectId}`,
+    `https://web-development-services-platform.onrender.com/api/update-progress/${projectId}`,
     {
       method: "POST",
       headers: {
@@ -32,7 +32,7 @@ window.location.reload();
   setAnimate(false);
 
   fetch(
-  `http://127.0.0.1:5000/api/assigned-projects/${email}`
+  `https://web-development-services-platform.onrender.com/api/assigned-projects/${email}`
 )
     .then((response) => response.json())
     .then((data) => {

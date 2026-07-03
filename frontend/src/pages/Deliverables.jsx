@@ -9,7 +9,7 @@ export default function Deliverables() {
     const email = localStorage.getItem("userEmail");
 
     fetch(
-      `http://127.0.0.1:5000/api/deliverables/${email}`
+      `https://web-development-services-platform.onrender.com/api/deliverables/${email}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -35,7 +35,7 @@ export default function Deliverables() {
           </h2>
 
           <a
-            href={`http://127.0.0.1:5000/uploads/${file[1]}`}
+            href={`https://web-development-services-platform.onrender.com/uploads/${file[1]}`}
             target="_blank"
             rel="noreferrer"
           >

@@ -10,7 +10,7 @@ export default function AdminPayments() {
   const addPayment = async () => {
 
     await fetch(
-      "http://127.0.0.1:5000/api/add-payment",
+      "https://web-development-services-platform.onrender.com/api/add-payment",
       {
         method: "POST",
         headers: {

@@ -25,7 +25,7 @@ export default function Chat() {
   const loadMessages = () => {
 
   fetch(
-  `http://127.0.0.1:5000/api/messages/${email}`
+  `https://web-development-services-platform.onrender.com/api/messages/${email}`
 )
   .then((response) => {
     if (!response.ok) {
@@ -37,7 +37,7 @@ export default function Chat() {
   setMessages(data.messages);
 
   fetch(
-    `http://127.0.0.1:5000/api/chat-files/${email}`
+    `https://web-development-services-platform.onrender.com/api/chat-files/${email}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -80,7 +80,7 @@ const uploadFile = async (file) => {
   );
 
   await fetch(
-    "http://127.0.0.1:5000/api/upload-chat-file",
+    "https://web-development-services-platform.onrender.com/api/upload-chat-file",
     {
       method: "POST",
       body: formData,
@@ -95,7 +95,7 @@ const uploadFile = async (file) => {
   const deleteFile = async (fileId) => {
 
   await fetch(
-    `http://127.0.0.1:5000/api/delete-chat-file/${fileId}`
+    `https://web-development-services-platform.onrender.com/api/delete-chat-file/${fileId}`
   );
 
   window.location.reload();
@@ -105,7 +105,7 @@ const uploadFile = async (file) => {
   const sendMessage = async () => {
 
     await fetch(
-      "http://127.0.0.1:5000/api/send-message",
+      "https://web-development-services-platform.onrender.com/api/send-message",
       {
         method: "POST",
         headers: {
@@ -162,7 +162,7 @@ const uploadFile = async (file) => {
   >
 
     <a
-      href={`http://127.0.0.1:5000/uploads/${file[1]}`}
+      href={`https://web-development-services-platform.onrender.com/uploads/${file[1]}`}
       target="_blank"
       rel="noreferrer"
       className="text-cyan-400 underline"

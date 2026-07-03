@@ -6,7 +6,7 @@ export default function AdminProjects() {
 
   useEffect(() => {
 
-    fetch("http://127.0.0.1:5000/api/projects")
+    fetch("https://web-development-services-platform.onrender.com/api/projects")
       .then((response) => response.json())
       .then((data) => {
         setProjects(data.projects);
@@ -17,7 +17,7 @@ export default function AdminProjects() {
   const updateStatus = async (id) => {
 
   const response = await fetch(
-    `http://127.0.0.1:5000/api/update-status/${id}`,
+    `https://web-development-services-platform.onrender.com/api/update-status/${id}`,
     {
       method: "PUT",
     }
@@ -26,11 +26,11 @@ export default function AdminProjects() {
   const updateStage = async (id, stage, email) => {
 
   await fetch(
-    `http://127.0.0.1:5000/api/update-stage/${id}/${stage}`
+    `https://web-development-services-platform.onrender.com/api/update-stage/${id}/${stage}`
   );
 
   await fetch(
-    "http://127.0.0.1:5000/api/add-notification",
+    "https://web-development-services-platform.onrender.com/api/add-notification",
     {
       method: "POST",
       headers: {
@@ -61,7 +61,7 @@ export default function AdminProjects() {
 const updateStage = async (id, stage) => {
 
   await fetch(
-    `http://127.0.0.1:5000/api/update-stage/${id}/${stage}`
+    `https://web-development-services-platform.onrender.com/api/update-stage/${id}/${stage}`
   );
 
   window.location.reload();
@@ -186,7 +186,7 @@ Completed
                     <td className="p-4">
 
                     <a
-                    href={`http://127.0.0.1:5000/api/download/${project[7]}`}
+                    href={`https://web-development-services-platform.onrender.com/api/download/${project[7]}`}
                     target="_blank"
                     rel="noreferrer"
                     >

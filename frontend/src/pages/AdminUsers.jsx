@@ -6,7 +6,7 @@ export default function AdminUsers() {
 
   useEffect(() => {
 
-    fetch("http://127.0.0.1:5000/api/users")
+    fetch("https://web-development-services-platform.onrender.com/api/users")
       .then((response) => response.json())
       .then((data) => {
         setUsers(data.users);
@@ -16,7 +16,7 @@ export default function AdminUsers() {
   const deleteUser = async (id) => {
 
   const response = await fetch(
-    `http://127.0.0.1:5000/api/delete-user/${id}`,
+    `https://web-development-services-platform.onrender.com/api/delete-user/${id}`,
     {
       method: "DELETE",
     }

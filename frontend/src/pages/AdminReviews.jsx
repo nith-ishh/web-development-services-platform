@@ -7,7 +7,7 @@ export default function AdminReviews() {
 
   useEffect(() => {
 
-    fetch("http://127.0.0.1:5000/api/reviews")
+    fetch("https://web-development-services-platform.onrender.com/api/reviews")
       .then((response) => response.json())
       .then((data) => {
 
